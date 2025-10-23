@@ -4,12 +4,13 @@ using UnityEngine;
 public class Test2 : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    [SerializeField] bool state = true;
 
     private void OnEnable()
     {
-        // EventManager.Subscribe(Condition.START, EnabledAnimator);
-        // EventManager.Subscribe(Condition.PAUSE, DisabledAnimator);
-        //
+        EventManager.Subscribe(Condition.START, EnableAnimator);
+        EventManager.Subscribe(Condition.PAUSE, DisableAnimator);
+
 
     }
 
@@ -24,25 +25,25 @@ public class Test2 : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    state = !state;
-        //    if (state)
-        //    {
-        //        EventManager.Publish(Condition.START);
-        //    }
-        //    else
-        //    {
-        //        EventManager.Publish(Condition.PAUSE);
-        //    }
-        //
-        //}
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            state = !state;
+            if (state)
+            {
+                EventManager.Publish(Condition.START);
+            }
+            else
+            {
+                EventManager.Publish(Condition.PAUSE);
+            }
+
+        }
     }
 
     private void OnDisable()
     {
-        // EventManager.Unsubsceribe(Condition.START, EnableAnimator);
-        // EventManager.Unsubsceribe(Condition.PAUSE, DisableAnimator);
+        EventManager.Unsubscribe(Condition.START, EnableAnimator);
+        EventManager.Unsubscribe(Condition.PAUSE, DisableAnimator);
 
     }
 
