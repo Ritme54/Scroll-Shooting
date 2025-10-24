@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4261919692218773364}
   - component: {fileID: 903740234087145681}
   - component: {fileID: 3129524267628024859}
+  - component: {fileID: 9172310822458864737}
   m_Layer: 0
   m_Name: Bullet_ShotGun_A
   m_TagString: Untagged
@@ -86,3 +87,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9172310822458864737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3489922258393200078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a7304a258a69b4193cccc5ad2ac605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  destroyTime: 5
+  fireEFT: {fileID: 100000, guid: 8eaaa4f553116f44b8459bc24201c514, type: 3}
