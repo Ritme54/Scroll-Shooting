@@ -11,7 +11,6 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private GameObject FETPrefab;
     [SerializeField] private Transform muzzleTransform;
 
-    [SerializeField] private float fallbackEffectDuration = 0.7f;
 
     private Coroutine disableEffectCoroutine;
 
